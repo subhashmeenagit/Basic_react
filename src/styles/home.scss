@@ -1,10 +1,12 @@
 @import "color";
-.home{
-    width: 100%;;
-    height: 100vh;
+
+.home {
+    width: 100%;
+    height: 80vh;
     background-color: $second;
-    border-radius: 0 0 200px 200px;
-    > main{
+    border-radius: 0 0 100px 100px;
+
+    >main {
         position: absolute;
         text-transform: uppercase;
         display: flex;
@@ -15,28 +17,32 @@
         justify-content: center;
         padding: 2rem;
     }
-    h1{
-        font:400 5rem "Raleway";
-        color: $first;
+
+    h1 {
+        font: 500 5rem "Raleway";
+        color: rgb(209, 143, 56);
     }
+
     p {
-        font:900 .8rem "Raleway" ;
+        font: 700 1rem "Raleway";
         color: $first;
         margin-right: 10px;
     }
-    &::before{
+
+    &::before {
         content: "";
         width: 100%;
         height: 100%;
         position: absolute;
         background: no-repeat center/auto url('../assets/pic4.jpg');
         background-size: 100% 100%;
-        filter: blur(1px);
-        border-radius: 0 0 200px 200px;
+        filter: grayscale(10%) hue-rotate(30deg);
+        border-radius: 0 0 100px 100px;
     }
 
 }
-.home2{
+
+.home2 {
     width: 100%;
     height: 100%;
     background-color: $second;
@@ -44,14 +50,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -200px;
-    >img{
-        width: 20%;
-        height: 20vh;
+    margin-top: -100px;
+
+    >img {
+        width: 150px;
+        height: 200px;
         animation: imgUp .7s linear infinite alternate;
+
+        border-radius: 50%;
     }
 
-    > div{
+    >div {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -61,33 +70,35 @@
         height: 100vh;
 
 
-        >p{
+        >p {
             color: $first;
             letter-spacing: 2px;
             word-spacing: 5px;
-            font:100 1.2rem $text2
+            font: 100 1.2rem $text2
         }
     }
-    
+
 }
-@keyframes imgUp{
-    to{
+
+@keyframes imgUp {
+    to {
         transform: translateY(-10px);
+
     }
 }
 
 
-.home3{
-    width: 100%;;
- 
+.home3 {
+    width: 100%;
+    ;
     background-color: $second;
     margin-top: -200px;
     display: flex;
-    height: 120vh;
+    height: 80vh;
 
-    > div{
+    >div {
         width: 70%;
-        height: 100vh;
+        height: 70vh;
         background-color: $first;
         border-radius: 0 200px 200px 0;
         display: flex;
@@ -96,79 +107,86 @@
         justify-content: center;
         padding: 2rem;
 
-        >h1{
+        >h1 {
             text-transform: uppercase;
             border-bottom: 2px solid $dark;
             padding: .5rem;
             width: 17rem;
             color: $dark;
         }
-        >p{
+
+        >p {
             padding: 5rem;
             letter-spacing: 1px;
             word-spacing: 5px;
             line-height: 170%;
-            font:italic 100 1.2rem $text2;
+            font: italic 100 1.2rem $text2;
         }
     }
 }
 
-.home4{
-    width: 100%;;
-    height: 100vh;
+.home4 {
+    width: 100%;
+    ;
+    height: 80vh;
     background-color: $second;
     display: flex;
     justify-content: flex-end;
-    >div{
-        
+
+    >div {
+
         background-color: $third;
         border-radius: 200px 0 0 200px;
         width: 70%;
-        height:70vh;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-
-     >h1{
-        color: $first;
-        text-transform: uppercase;
-        width: 140px;
-        border-bottom: 2px solid $first;
-        padding: .5rem;
-     }
-     >article{
-        
+        height: 70vh;
         display: flex;
-        margin: 2rem 0;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
-        >div{
-            animation: imgUp .7s linear infinite alternate;
-     
-            margin: 1rem;
-            height: 10rem;
-            width: 10rem;
-            background-color: $first;
-            border-radius: 50%;
+        align-items: center;
+
+        >h1 {
+            color: $first;
+            text-transform: uppercase;
+            width: 140px;
+            border-bottom: 2px solid $first;
+            padding: .5rem;
+        }
+
+        >article {
+
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
             justify-content: center;
-            color: $dark;
-            cursor: pointer;
-            transition: all .5s;
-            &:hover{
-                filter:invert(1)
-                
-            }
-            svg{
-                font-size: 4rem;
-            }
-            p{
-                font:900 1.2rem $text2
+
+            >div {
+                animation: imgUp .7s linear infinite alternate;
+
+                margin: 1rem;
+                height: 10rem;
+                width: 10rem;
+                background-color: $first;
+                border-radius: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: $dark;
+                cursor: pointer;
+                transition: all .5s;
+
+                &:hover {
+                    filter: invert(1)
+                }
+
+                svg {
+                    font-size: 4rem;
+                }
+
+                p {
+                    font: 900 1.2rem $text2
+                }
             }
         }
-     }
     }
 }
